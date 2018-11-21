@@ -14,4 +14,10 @@ public class Shop : MonoBehaviour {
         Debug.Log("Tourelle standard selectionnée");
         buildManager.SetTurretToBuild(buildManager.standardTurretPrefab);
     }
+
+    public void PurchaseMissileLauncher()
+    {
+        Debug.Log("Lance missile selectionné");
+        buildManager.SetTurretToBuild(buildManager.missileLauncherPrefab);
+    }
 }
