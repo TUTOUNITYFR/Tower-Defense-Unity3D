@@ -98,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1785249151238752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.00475, z: -0.01521}
+  m_LocalPosition: {x: -0, y: 0.00475, z: 0.01565}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4613819596875406}
@@ -137,7 +137,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1249713845657978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: -11.959098, y: -0.5, z: 4.4948654}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4613819596875406}
@@ -261,6 +261,6 @@ MonoBehaviour:
   enemyTag: Enemy
   partToRotate: {fileID: 4613819596875406}
   fireRate: 0.25
-  bulletPrefab: {fileID: 1786780135103348, guid: 6cb5de9f3c3976643bfdbfe6f9b0d495,
+  bulletPrefab: {fileID: 1216638467154300, guid: 86753e719e72ce143b1858b725745ecd,
     type: 2}
   firePoint: {fileID: 4271528518154444}
