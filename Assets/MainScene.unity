@@ -1559,6 +1559,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9832da69c5607eb4584fe32dcfb81c6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  standardTurret:
+    prefab: {fileID: 1680535116951788, guid: 2f28ca640afa34f4f96d0348757fc04a, type: 2}
+    cost: 100
+  missileLauncherTurret:
+    prefab: {fileID: 1249713845657978, guid: 9f4f2cfb2b4629348b53069f1462a2b1, type: 2}
+    cost: 250
 --- !u!1001 &222748451
 Prefab:
   m_ObjectHideFlags: 0
@@ -3686,7 +3692,7 @@ Prefab:
     - target: {fileID: 114757052305523784, guid: abfc7eda4a47c334598afa9cbf1c487e,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseMissileLauncher
+      value: SelectMissileLauncher
       objectReference: {fileID: 0}
     - target: {fileID: 114757052305523784, guid: abfc7eda4a47c334598afa9cbf1c487e,
         type: 2}
@@ -5182,6 +5188,7 @@ GameObject:
   - component: {fileID: 732405758}
   - component: {fileID: 732405757}
   - component: {fileID: 732405759}
+  - component: {fileID: 732405760}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5233,6 +5240,18 @@ MonoBehaviour:
     type: 2}
   missileLauncherPrefab: {fileID: 1249713845657978, guid: 9f4f2cfb2b4629348b53069f1462a2b1,
     type: 2}
+--- !u!114 &732405760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 732405756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed422e8a16ec3f4d9fac46afb17e6c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startMoney: 400
 --- !u!1001 &738263216
 Prefab:
   m_ObjectHideFlags: 0
@@ -8211,7 +8230,7 @@ Prefab:
     - target: {fileID: 114757052305523784, guid: abfc7eda4a47c334598afa9cbf1c487e,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseStandardTurret
+      value: SelectStandardTurret
       objectReference: {fileID: 0}
     - target: {fileID: 114757052305523784, guid: abfc7eda4a47c334598afa9cbf1c487e,
         type: 2}

@@ -2,6 +2,9 @@
 
 public class Shop : MonoBehaviour {
 
+    public TurretBlueprint standardTurret;
+    public TurretBlueprint missileLauncherTurret;
+
     private BuildManager buildManager;
 
     private void Start()
@@ -9,15 +12,15 @@ public class Shop : MonoBehaviour {
         buildManager = BuildManager.instance;
     }
 
-    public void PurchaseStandardTurret()
+    public void SelectStandardTurret()
     {
         Debug.Log("Tourelle standard selectionnée");
-        buildManager.SetTurretToBuild(buildManager.standardTurretPrefab);
+        buildManager.SelectTurretToBuild(standardTurret);
     }
 
-    public void PurchaseMissileLauncher()
+    public void SelectMissileLauncher()
     {
         Debug.Log("Lance missile selectionné");
-        buildManager.SetTurretToBuild(buildManager.missileLauncherPrefab);
+        buildManager.SelectTurretToBuild(missileLauncherTurret);
     }
 }
