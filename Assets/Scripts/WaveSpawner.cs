@@ -13,7 +13,7 @@ public class WaveSpawner : MonoBehaviour {
     [SerializeField]
     private float timeBetweenWaves = 5f;
 
-    private float countdown = 2f;
+    private float countdown = 5f;
 
     [SerializeField]
     private Text waveCountdownTimer;
@@ -28,7 +28,10 @@ public class WaveSpawner : MonoBehaviour {
         }
 
         countdown -= Time.deltaTime;
-        waveCountdownTimer.text = Mathf.Round(countdown).ToString();
+
+        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
+
+        waveCountdownTimer.text = string.Format("{0:00.00}", countdown);
 	}
 
     IEnumerator SpawnWave()
