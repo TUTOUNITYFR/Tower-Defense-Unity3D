@@ -1393,6 +1393,7 @@ RectTransform:
   m_Children:
   - {fileID: 1251305343}
   - {fileID: 1205868520}
+  - {fileID: 2117227867}
   m_Father: {fileID: 167292733}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1474,6 +1475,9 @@ MonoBehaviour:
   missileLauncherTurret:
     prefab: {fileID: 1249713845657978, guid: 9f4f2cfb2b4629348b53069f1462a2b1, type: 2}
     cost: 250
+  laserBeamerTurret:
+    prefab: {fileID: 1129674820563134, guid: a3f011b7cf2d1584a970354060d39bb2, type: 2}
+    cost: 350
 --- !u!1001 &222748451
 Prefab:
   m_ObjectHideFlags: 0
@@ -5182,10 +5186,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2651cc0babc7d84fb405c90db9a39da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standardTurretPrefab: {fileID: 1680535116951788, guid: 2f28ca640afa34f4f96d0348757fc04a,
-    type: 2}
-  missileLauncherPrefab: {fileID: 1249713845657978, guid: 9f4f2cfb2b4629348b53069f1462a2b1,
-    type: 2}
   buildEffect: {fileID: 1027738543065722, guid: a89a64cc6e1c7024cae65521723d37e3,
     type: 2}
 --- !u!114 &732405760
@@ -6611,6 +6611,141 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4617644538218560, guid: ff2d1384be855864aaaff365b1f77084,
     type: 2}
   m_PrefabInternal: {fileID: 950493648}
+--- !u!1001 &952827978
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 209023826}
+    m_Modifications:
+    - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 618
+      objectReference: {fileID: 0}
+    - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -51.049988
+      objectReference: {fileID: 0}
+    - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114757052305523784, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 209023830}
+    - target: {fileID: 1756493645804288, guid: abfc7eda4a47c334598afa9cbf1c487e, type: 2}
+      propertyPath: m_Name
+      value: ShopLaserBeamer
+      objectReference: {fileID: 0}
+    - target: {fileID: 114944498639941734, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 16d5443feb7a7e04e97fc17a983b5482,
+        type: 3}
+    - target: {fileID: 114294702126007368, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_PreferredWidth
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294702126007368, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_PreferredHeight
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114757052305523784, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectLaserBeamer
+      objectReference: {fileID: 0}
+    - target: {fileID: 114238043590930708, guid: abfc7eda4a47c334598afa9cbf1c487e,
+        type: 2}
+      propertyPath: m_Text
+      value: $350
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abfc7eda4a47c334598afa9cbf1c487e, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &968737501
 Prefab:
   m_ObjectHideFlags: 0
@@ -8309,7 +8444,7 @@ Prefab:
     - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 484
+      value: 443
       objectReference: {fileID: 0}
     - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
         type: 2}
@@ -10069,7 +10204,7 @@ Prefab:
     - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 574
+      value: 533
       objectReference: {fileID: 0}
     - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
         type: 2}
@@ -13378,6 +13513,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4617644538218560, guid: ff2d1384be855864aaaff365b1f77084,
     type: 2}
   m_PrefabInternal: {fileID: 2107425641}
+--- !u!224 &2117227867 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
+    type: 2}
+  m_PrefabInternal: {fileID: 952827978}
 --- !u!1001 &2118858389
 Prefab:
   m_ObjectHideFlags: 0
