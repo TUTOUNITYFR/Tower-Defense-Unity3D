@@ -6,6 +6,7 @@ public class Turret : MonoBehaviour {
 
     public float range = 15f;
     private Transform target;
+    private Enemy targetEnemy;
 
     [Header("Use Bullets (default)")]
 
@@ -16,6 +17,8 @@ public class Turret : MonoBehaviour {
     [Header("Use Laser")]
 
     public bool useLaser;
+    public int damageOverTime = 30;
+    public float slowAmount = 0.5f;
     public LineRenderer lineRenderer;
     public ParticleSystem impactEffect;
     public Light impactLight;
@@ -52,6 +55,7 @@ public class Turret : MonoBehaviour {
         if(nearestEnemy != null && shortestDistance <= range)
         {
             target = nearestEnemy.transform;
+            targetEnemy = target.GetComponent<Enemy>();
         }
         else
         {
@@ -105,6 +109,9 @@ public class Turret : MonoBehaviour {
 
     void Laser()
     {
+        targetEnemy.TakeDammage(damageOverTime * Time.deltaTime);
+        targetEnemy.Slow(slowAmount);
+
         if(lineRenderer.enabled == false)
         {
             lineRenderer.enabled = true;
