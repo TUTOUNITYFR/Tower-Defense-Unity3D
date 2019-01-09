@@ -34,14 +34,14 @@ public class Node : MonoBehaviour {
             return;
         }
 
-        if (!buildManager.canBuild)
+        if(turret != null)
         {
+            buildManager.SelectNode(this);
             return;
         }
 
-        if(turret != null)
+        if (!buildManager.canBuild)
         {
-            Debug.Log("Impossible de construire ici, il y a déjà une tourelle.");
             return;
         }
 
