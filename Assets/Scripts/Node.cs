@@ -7,7 +7,12 @@ public class Node : MonoBehaviour {
     public Color notEnoughMoneyColor;
     public Vector3 positionOffset;
 
+    [HideInInspector]
     public GameObject turret;
+    [HideInInspector]
+    public TurretBlueprint turretBlueprint;
+    [HideInInspector]
+    public bool isUpgraded = false;
 
     private Color startColor;
     private Renderer rend;
@@ -25,6 +30,52 @@ public class Node : MonoBehaviour {
     public Vector3 GetBuildPosition()
     {
         return transform.position + positionOffset;
+    }
+
+    public void UpgradeTurret()
+    {
+        if (PlayerStats.money < turretBlueprint.upgradeCost)
+        {
+            Debug.Log("Pas assez d'argent pour améliorer la tourelle.");
+            return;
+        }
+
+        PlayerStats.money -= turretBlueprint.upgradeCost;
+
+        // Supression de l'ancienne tourelle
+        Destroy(turret);
+
+        // Création de la nouvelle tourelle améliorée.
+        GameObject _turret = (GameObject)Instantiate(turretBlueprint.upgradedPrefab, GetBuildPosition(), Quaternion.identity);
+        turret = _turret;
+
+        GameObject effect = (GameObject)Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 1f);
+
+        isUpgraded = true;
+
+        Debug.Log("Tourelle améliorée.");
+    }
+
+    private void BuildTurret(TurretBlueprint blueprint)
+    {
+        if (PlayerStats.money < blueprint.cost)
+        {
+            Debug.Log("Pas assez d'argent pour cela");
+            return;
+        }
+
+        PlayerStats.money -= blueprint.cost;
+
+        turretBlueprint = blueprint;
+
+        GameObject _turret = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
+        turret = _turret;
+
+        GameObject effect = (GameObject)Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 1f);
+
+        Debug.Log("La tourelle a été construite.");
     }
 
     private void OnMouseDown()
@@ -45,7 +96,7 @@ public class Node : MonoBehaviour {
             return;
         }
 
-        buildManager.BuildTurretOn(this);
+        BuildTurret(buildManager.GetTurretToBuild());
     }
 
     private void OnMouseEnter()

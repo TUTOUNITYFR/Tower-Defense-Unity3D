@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 4629174808463694}
   - component: {fileID: 114227415485887926}
   m_Layer: 0
-  m_Name: Turret
+  m_Name: StandardTurret_Upgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,7 +125,7 @@ Transform:
   m_GameObject: {fileID: 1680535116951788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 35, y: 0.5, z: 65}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
   m_Children:
   - {fileID: 4947493480174124}
   - {fileID: 4681350712246990}
@@ -175,9 +175,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 60b58aff7b69136419fdea9ec4bb08d7, type: 2}
-  - {fileID: 2100000, guid: dbbf68252b5746a4fb3330bc8714f0d9, type: 2}
-  - {fileID: 2100000, guid: cac2573a1f08ca64a99473f3c311af07, type: 2}
+  - {fileID: 2100000, guid: 50a4aa48b1e1a6d4586d4f8e9586d835, type: 2}
+  - {fileID: 2100000, guid: d522ac6468eca8a44b73a6284080a333, type: 2}
+  - {fileID: 2100000, guid: 3937ad3e559b0604c9a1c6aa405bdf96, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -212,8 +212,8 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: dbbf68252b5746a4fb3330bc8714f0d9, type: 2}
-  - {fileID: 2100000, guid: cac2573a1f08ca64a99473f3c311af07, type: 2}
+  - {fileID: 2100000, guid: d522ac6468eca8a44b73a6284080a333, type: 2}
+  - {fileID: 2100000, guid: 3937ad3e559b0604c9a1c6aa405bdf96, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -258,10 +258,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ecd2b0968930447902388b4e4725be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 15
+  range: 20
+  bulletPrefab: {fileID: 1786780135103348, guid: 64da0f4b3cbca2248b812d01f298dc4b,
+    type: 2}
+  fireRate: 1.5
+  useLaser: 0
+  damageOverTime: 30
+  slowAmount: 0.5
+  lineRenderer: {fileID: 0}
+  impactEffect: {fileID: 0}
+  impactLight: {fileID: 0}
   enemyTag: Enemy
   partToRotate: {fileID: 4681350712246990}
-  fireRate: 1
-  bulletPrefab: {fileID: 1786780135103348, guid: 6cb5de9f3c3976643bfdbfe6f9b0d495,
-    type: 2}
   firePoint: {fileID: 4370619134096834}
