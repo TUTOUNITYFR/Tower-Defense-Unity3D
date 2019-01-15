@@ -78,6 +78,18 @@ public class Node : MonoBehaviour {
         Debug.Log("La tourelle a été construite.");
     }
 
+    public void SellTurret()
+    {
+        PlayerStats.money += turretBlueprint.GetSellAmount();
+
+        GameObject effect = (GameObject)Instantiate(buildManager.sellEffect, GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 1f);
+
+        Destroy(turret);
+        turretBlueprint = null;
+        isUpgraded = false;
+    }
+
     private void OnMouseDown()
     {
         if (EventSystem.current.IsPointerOverGameObject())

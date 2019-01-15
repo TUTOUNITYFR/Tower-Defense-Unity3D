@@ -1048,7 +1048,7 @@ GameObject:
   - component: {fileID: 137527230}
   - component: {fileID: 137527229}
   m_Layer: 0
-  m_Name: Cost
+  m_Name: Amount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1855,13 +1855,15 @@ MonoBehaviour:
   missileLauncherTurret:
     prefab: {fileID: 1249713845657978, guid: 9f4f2cfb2b4629348b53069f1462a2b1, type: 2}
     cost: 250
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
+    upgradedPrefab: {fileID: 1249713845657978, guid: 0a7f7218a37526c40af72fdfc27658e5,
+      type: 2}
+    upgradeCost: 150
   laserBeamerTurret:
     prefab: {fileID: 1129674820563134, guid: a3f011b7cf2d1584a970354060d39bb2, type: 2}
     cost: 350
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
+    upgradedPrefab: {fileID: 1129674820563134, guid: c5dd1744b377211468c5b3e2fbf8b34f,
+      type: 2}
+    upgradeCost: 250
 --- !u!1001 &222748451
 Prefab:
   m_ObjectHideFlags: 0
@@ -6422,6 +6424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildEffect: {fileID: 1027738543065722, guid: a89a64cc6e1c7024cae65521723d37e3,
     type: 2}
+  sellEffect: {fileID: 1952193941408612, guid: 992565785373de64fb4225eb5f1134c4, type: 2}
   nodeUI: {fileID: 2134099788}
 --- !u!114 &732405760
 MonoBehaviour:
@@ -9281,7 +9284,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1080451705}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2134099788}
+        m_MethodName: Sell
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1080451705
@@ -16182,6 +16196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 641392589}
+  sellAmount: {fileID: 137527229}
   upgradeCost: {fileID: 303214310}
   upgradeButton: {fileID: 623776888}
 --- !u!1001 &2135953752
