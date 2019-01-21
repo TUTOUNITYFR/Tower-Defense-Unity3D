@@ -2,8 +2,6 @@
 
 public class CameraController : MonoBehaviour {
 
-    private bool canMove = true;
-
     public float panSpeed = 30f;
     public float panBorder = 10f;
 
@@ -17,16 +15,6 @@ public class CameraController : MonoBehaviour {
         if (GameManager.gameIsOver)
         {
             this.enabled = false;
-            return;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            canMove = !canMove;
-        }
-
-        if (!canMove)
-        {
             return;
         }
 
