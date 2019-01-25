@@ -5,6 +5,10 @@ public class PauseMenu : MonoBehaviour {
 
     public GameObject ui;
 
+    public SceneFader sceneFader;
+
+    public string menuSceneName = "MainMenu";
+
 	void Update () {
 
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
@@ -32,12 +36,13 @@ public class PauseMenu : MonoBehaviour {
     public void Retry()
     {
         Toggle();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        sceneFader.FadeTo(SceneManager.GetActiveScene().name);
     }
 
     public void MainMenu()
     {
-        Debug.Log("Chargement du menu");
+        Toggle();
+        sceneFader.FadeTo(menuSceneName);
     }
 
 }
