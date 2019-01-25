@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114308301936998044}
   - component: {fileID: 114169484772257422}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy_slow
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,7 +112,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: f82b3d945bae47b48b694cc40f732365, type: 2}
+  - {fileID: 2100000, guid: 76c1105631b830d4186decdec6b20f9a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -215,11 +215,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 044bb9bdfee7ca5409839b0c8b83f5cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 50
+  startSpeed: 7
   speed: 0
-  startHealth: 100
-  worth: 50
-  deathEffect: {fileID: 1573940579407090, guid: 8a46890e477bb244c83b488e34905d14,
+  startHealth: 350
+  worth: 150
+  deathEffect: {fileID: 1573940579407090, guid: 0b64f2677759c5248a32757b9400ebae,
     type: 2}
   healthbar: {fileID: 114117680382687328}
 --- !u!114 &114629773811813098
