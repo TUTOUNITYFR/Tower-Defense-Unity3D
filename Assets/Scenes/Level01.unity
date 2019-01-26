@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -89,7 +89,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000002, guid: 931098e82824e2e4ab4636c1d4cfbc76,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -8805,7 +8806,7 @@ Prefab:
     - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 690.95544
+      value: 623.8096
       objectReference: {fileID: 0}
     - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
         type: 2}
@@ -10976,7 +10977,7 @@ Prefab:
     - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 515.95544
+      value: 448.80957
       objectReference: {fileID: 0}
     - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
         type: 2}
@@ -12895,7 +12896,7 @@ Prefab:
     - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 605.95544
+      value: 538.8096
       objectReference: {fileID: 0}
     - target: {fileID: 224045218436712954, guid: abfc7eda4a47c334598afa9cbf1c487e,
         type: 2}
